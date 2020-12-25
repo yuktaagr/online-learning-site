@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dasborad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Writing</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="{% static 'image/logo.jpg' %}" width="50" height="50" style="border-radius:25px"></a>
+
+        <a class="navbar-brand" href="{% url 'lms:dashboard2' %}">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <form class="d-flex">
+            <!-- <input class="form-control me-2" type="back" placeholder="enroll" aria-label="Enroll Me"> -->
+
+
+
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="back" placeholder="Back" aria-label="Search">
+             <button class="btn btn-outline-primary" type="submit">Back</button>
+
+
+
+
+
+
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1 style="    margin-left: 168px;"> Writing with confidence : Writing beginner to writing</h1>
+                <!-- <h3>Secrets revealed of writing excellent blogs </h3> -->
+                <img class="img-fluid" src="{% static 'image/writing.jpg' %}"
+                    style="    width: 542px; height: 383px;align-items: center;justify-content: center; margin-left: 272px ;" />
+                <br>
+                <br>
+                <button class="btn btn-outline-danger" type="submit" style="    margin-left: 517px;">Enroll</button>
+                <h3>What you'll learn</h3>
+                <ul>
+                    <li> Answers to every single question you have about ethical hacking and penetration testing from an
+                        experienced IT professional!</li>
+           <li> Transform writing from dull to dazzling - within the first 10 mins of the course</li>
+                    <li> Uncover the secret persuasion tactics known only to the world’s top copywriters </li>
+                    <li> Create musical sentences that readers can’t resist.</li>
+                    <li> Craft addictively readable text that keeps readers glued to the page </li>                </ul>
+                <h3>Requirements</h3>
+                <ul>
+                    <li> A basic grasp of English.</li>
+                    <li> Pen and notebook </li>
+                    <li> A willingness to roll up your sleeves and put into practice what you’ve learned!</li>
+                </ul>
+                <h3>Description</h3>
+                <p> As its name suggests, Writing With Confidence: Writing Beginner To Writing Pro takes you from the writing fundamentals right through to the elite techniques practised by the world’s top copywriters. Top copywriters like your instructor, Dr Clare Lynch, in fact.
+From the very first lectures, you’ll be inspired to beat writer’s block and get something down on the page. You'll also gain instant ideas for taking your first draft from OK to outstanding.
+Next, you’ll discover a secret most writing and editing teachers won’t share with you: that good writing isn’t just about the writing. For the most part, good writing is about the thinking you do before you even sit down at your laptop or open your journal.
+That’s because, when it comes to becoming a powerful writer – the sort of writer who gets the job, closes the sale or wins buy-in for your ideas - it’s not about the technicalities of spelling and grammar. It’s about your ability to connect with your reader on an emotional, intellectual and visceral level.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

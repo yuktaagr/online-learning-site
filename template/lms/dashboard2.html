@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dasborad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="{% static 'image/logo.jpg' %}" width="50" height="50" style="border-radius:25px"></a>
+
+        <a class="navbar-brand" href="{% url 'lms:dashboard2' %}">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search Course" aria-label="Search">
+             <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <a href="{% url 'lms:user_logout' %}"> <button class="btn btn-outline-danger" type="submit" style="margin-left: 856px; margin-right: 11px;" >Logout</button></a>
+
+
+        <a href="{% url 'lms:profile' %}"><button class="btn btn-outline-danger" type="submit">Profile</button></a>
+
+      </nav>
+    <!--courses-->
+
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h1>WELCOME {{user.username}} </h1>
+                <h2 class="section-heading text-uppercase">Courses</h2>
+                <h3 class="section-subheading text-muted">Online learning is rapidly becoming one of the most
+                    cost-effective ways to educate the world’s rapidly
+                    expanding workforce</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <a href="{% url 'lms:course1' %}"><img class="img-fluid" src="{% static 'image/Ethical Hacking (1) - Copy.jpg'%}" alt="" /></a>
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">
+                                <a href="{% url 'lms:course1' %}">The Complete Ethical Hacking Course: Beginner to
+                                Advanced!</a></div>
+                            <div class="portfolio-caption-subheading text-muted">Learn how to do ethical hacking,
+                                penetration testing, web testing, and wifi hacking using kali linux!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="{% url 'lms:course2' %}"">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                           <a href="{% url 'lms:course2' %}">< <img class="img-fluid" src="{% static 'image/MySQL.jpg' %}" alt="" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><a href="{% url 'lms:course2' %}">SQL - MySQL for Data Analytics and Business
+                                Intelligence</a></div>
+                            <div class="portfolio-caption-subheading text-muted">SQL that will get you hired – SQL for
+                                Business Analysis, Marketing, and Data Management</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="{% url 'lms:course3' %}"">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                        <a href="{% url 'lms:course3' %}"><img class="img-fluid" src="{% static 'image/writing.jpg' %}" alt="" /></a>
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><a href="{% url 'lms:course3' %}">Writing With Confidence: Writing Beginner To Writing
+                                Pro</a></div>
+                            <div class="portfolio-caption-subheading text-muted">Pro copywriter/Cambridge University
+                                writing teacher reveals the secrets for writing blogs and business docs that enthral
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="{% url 'lms:course4' %}"">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                        <a href="{% url 'lms:course4' %}"><img class="img-fluid" src="{% static 'image/Guitar.jpg' %}" alt="" /></a>
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><a href="{% url 'lms:course4' %}">Complete Guitar System - Beginner to Advanced</a></div>
+                            <div class="portfolio-caption-subheading text-muted">All-in-one Guitar Course With a Proven
+                                Step-by-step Learning System. Pick the guitar and start learning right away. If the
+                                right practice style you will be able to witness fast results.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="{% url 'lms:course5' %}"">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                        <a href="{% url 'lms:course5' %}"><img class="img-fluid" src="{% static 'image/German.png' %}" alt="" /></a>
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><a href="{% url 'lms:course5' %}">Learn German Language: Complete German Course -
+                                Beginners</a></div>
+                            <div class="portfolio-caption-subheading text-muted">Learn German with a Native Teacher.
+                                Complete Course - German for Beginners (A1,A2,A2+) German Grammar, German Vocabulary
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="{% url 'lms:course6' %}"">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                        <a href="{% url 'lms:course6' %}"><img class="img-fluid" src="{% static 'image/Microcontroller.jpg' %}" alt="" /></a>
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><a href="{% url 'lms:course6' %}">Master Microcontroller :TIMERS, PWM, CAN,RTC,LOW
+                                POWER(MCU2)</a></div>
+                            <div class="portfolio-caption-subheading text-muted">Learn STM32 TIMERS, CAN,RTC, PWM,LOW
+                                POWER embedded systems and program them using STM32 Device HAL APIs STEP by STEP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
